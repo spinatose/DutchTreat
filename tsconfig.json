@@ -4,5 +4,9 @@
 	"compilerOptions": {
 		"module": "None",
 		"sourceMap": true
-	}
+	},
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
 }

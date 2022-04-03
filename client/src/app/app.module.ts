@@ -9,6 +9,9 @@ import { CartView } from './views/cartView.component';
 import router from './router';
 import { ShopPage } from './pages/shopPage.component';
 import { Checkout } from './pages/checkout.component';
+import { LoginPage } from './pages/loginPage.component';
+import { SoulGlowActivator } from './services/authActivator.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,15 +19,18 @@ import { Checkout } from './pages/checkout.component';
         ProductListView,
         CartView,
         ShopPage,
-        Checkout
+        Checkout,
+        LoginPage
   ],
   imports: [
       BrowserModule,
+      FormsModule,
       HttpClientModule,
       router
   ],
     providers: [
-        Store
+        Store,
+        SoulGlowActivator
     ],
   bootstrap: [AppComponent]
 })
