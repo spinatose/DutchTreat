@@ -1,4 +1,4 @@
-﻿import { HttpClient } from "@angular/common/http";
+﻿import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 import { LoginRequest } from "../shared/LoginRequest";
@@ -19,6 +19,16 @@ export class Store {
 
     get loginRequired(): boolean {
         return this.token.length === 0 || this.expiration > new Date();
+    }
+
+    checkout() {
+        const hdrs = new HttpHeaders().set("Authorization", `Bearer ${this.token}`)
+        return this.http.post("/api/orders", this.order, {
+            headers: hdrs
+        })
+            .pipe(map(() => {
+                this.order = new Order();
+            }));
     }
 
     loadProducts(): Observable<void> {
