@@ -1,0 +1,17 @@
+{
+	"ConnectionStrings": {
+		"DutchContextDb2": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DutchTreatDb;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=true",
+		"DutchContextDb": "Data Source=(localdb)\\v11.0;Initial Catalog=DutchTreatDb;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=true"
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning"
+		}
+	},
+	"Token": {
+		"Key": "adfkadfl;kjadsf;lkajsdf;l",
+		"Issuer":    "http://localhost:8888",
+		"Audience":  "http://localhost:8888"
+	}
+}

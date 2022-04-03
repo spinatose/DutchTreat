@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Product> 
+@section Scripts {
+    <script src="~/client/polyfills.js"></script>
+    <script src="~/client/runtime.js"></script>
+    <script src="~/client/main.js" asp-append-version="true"></script>
+}
+@section head {
+    <base href="/App/Shop"
+    <link href="~/client/styles.css" rel="stylesheet" />
+}
+
+
+<the-shop></the-shop>
+
+@*<h1>Shop</h1>
+<p>Count: @Model.Count()</p>
+
+@* class="row" is what bootstrap needs in order to start adhering to grid pattern 
+<div class="row">
+    @foreach(var p in Model){
+    <div class="col-md-3">
+        <div class="border bg-light rounded p-1">
+            <img src="~/img/@(p.ArtId).jpg" alt="@(p.ArtDating)" class="img-fluid" />
+            <h3>@p.Category - @p.Size</h3>
+            <ul>
+                <li>Price: $@p.Price</li>
+                <li>Artist: @p.Artist</li>
+                <li>Title: @p.Title</li>
+                <li>Description: @p.ArtDescription</li>
+            </ul>
+            <button id="btnBuy" class="btn btn-success">buy</button>
+        </div>
+    </div>
+    }
+</div>
+*@

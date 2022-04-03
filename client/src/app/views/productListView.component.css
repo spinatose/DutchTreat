@@ -1,0 +1,10 @@
+﻿.product-imaage {
+    border: 1px #ddd solid;
+    box-shadow: rgba(0,0,0,.4) 2px 2px;
+    margin: 2px;
+    width: 150px;
+}
+
+.product-props {
+    font-size: .9rem;
+}
