@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <StartupObject>DutchTreat.Program</StartupObject>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,4 +23,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
   </ItemGroup>
 
+	<Target Name="MyPublishScripts" BeforeTargets="BeforePublish">
+		<Exec Command="npm install" />
+		<Exec Command="gulp" />
+		<Exec Command="npm install" WorkingDirectory=".\\client" />
+		<Exec Command="ng build --output-hashing none" WorkingDirectory=".\\client" />
+	</Target>
 </Project>

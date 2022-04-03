@@ -18,7 +18,7 @@ namespace DutchTreat.Controllers.Api
     [Route("api/[Controller]")]
     [ApiController]
     [Produces("application/json")]
-    //[Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
     public class OrdersController : ControllerBase
     {
         private readonly IDutchAdapter _adapater;
