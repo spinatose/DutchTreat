@@ -74,7 +74,7 @@ namespace DutchTreat
             //    });
 
             // order here matters for middleware
-            // app.UseDefaultFiles(); // this tells it to look for default index.html or other default pages first- don't want this if we are going to use MVC
+            app.UseDefaultFiles(); // this tells server to rewrite url to appear as default website files - eg. "/index.html"
             app.UseStaticFiles();
             
             // this tells MVC how to route traffic into site
